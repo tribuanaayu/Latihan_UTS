@@ -10,6 +10,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var produkRouter = require('./routes/produk');
+var kategoriRouter = require('./routes/kategori');
 var app = express();
 
 // view engine setup
@@ -27,6 +28,7 @@ app.use('/users', usersRouter);
 
 //API
 app.use('/api', produkRouter);
+app.use('/api', kategoriRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
